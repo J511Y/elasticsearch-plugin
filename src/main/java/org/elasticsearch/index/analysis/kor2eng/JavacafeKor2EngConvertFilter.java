@@ -18,28 +18,24 @@ public final class JavacafeKor2EngConvertFilter extends TokenFilter {
     private KorToEngConverter converter;
     private CharTermAttribute termAtt;
 
-    
     public JavacafeKor2EngConvertFilter(TokenStream stream) {
-        super(stream);        
+        super(stream);
         this.converter = new KorToEngConverter();
-        this.termAtt = addAttribute(CharTermAttribute.class);     
+        this.termAtt = addAttribute(CharTermAttribute.class);
     }
 
-    
     @Override
     public boolean incrementToken() throws IOException {
-        
+
         if (input.incrementToken()) {
             CharSequence parserdData = converter.convert(termAtt.toString());
             termAtt.setEmpty();
             termAtt.append(parserdData);
-        
+
             return true;
         }
-        
+
         return false;
     }
-    
-    
 
 }

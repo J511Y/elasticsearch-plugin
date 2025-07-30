@@ -14,6 +14,7 @@ public class KoreanMerger {
 
     /**
      * 자모 리스트를 합쳐서 한글로 변환한다.
+     * 
      * @param jamoList
      * @return
      * @throws Exception
@@ -37,7 +38,7 @@ public class KoreanMerger {
             // 자모 리스트에서 한글 한글자에 해당하는 사이즈를 구한다.
             int oneHangulJamoSize = HangulUtil.getOneHangulJamoSize(startIdx, jamoList);
             if (oneHangulJamoSize == -1) {
-                throw new Exception("한글은 최소 2개 이상의 유니코드 조합으로 이루어져야 합니다."); 
+                throw new Exception("한글은 최소 2개 이상의 유니코드 조합으로 이루어져야 합니다.");
             }
 
             // 한글 유니코드가 시작되는 Decimal값을 구한다.
@@ -64,17 +65,13 @@ public class KoreanMerger {
             }
 
             // Decimal값을 String으로 변환한다.
-            String hangul = Character.toString((char)decimalCode);
+            String hangul = Character.toString((char) decimalCode);
             result = result + hangul;
-            
+
             startIdx = startIdx + oneHangulJamoSize;
         }
 
         return result;
     }
 
-    
-    
 }
-
-
