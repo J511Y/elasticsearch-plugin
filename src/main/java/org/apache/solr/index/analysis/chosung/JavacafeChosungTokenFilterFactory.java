@@ -34,7 +34,7 @@ public class JavacafeChosungTokenFilterFactory extends TokenFilterFactory {
 
     
     public JavacafeChosungTokenFilterFactory(Map<String, String> args) {
-        super(args);
+        super(indexSettings, name, settings);
     }
 
     @Override

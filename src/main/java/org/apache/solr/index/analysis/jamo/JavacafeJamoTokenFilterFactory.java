@@ -10,7 +10,7 @@ public class JavacafeJamoTokenFilterFactory  extends TokenFilterFactory {
 
     
     public JavacafeJamoTokenFilterFactory(Map<String, String> args) {
-        super(args);
+        super(indexSettings, name, settings);
     }
     
 

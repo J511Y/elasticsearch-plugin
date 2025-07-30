@@ -29,7 +29,7 @@ public class JavacafeKor2EngConvertFilterFactory extends TokenFilterFactory {
 
     
     public JavacafeKor2EngConvertFilterFactory(Map<String, String> args) {
-        super(args);
+        super(indexSettings, name, settings);
     }
     
 
