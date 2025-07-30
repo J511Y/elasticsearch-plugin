@@ -55,6 +55,15 @@ public class ConverterE2KTest {
         assertEquals("한글1", result);
     }
 
-    
+    @Test
+    public void test5() {
+        String token = "007 sh xkdla xn ekdl";
+
+        EngToKorConverter convert = new EngToKorConverter();
+        String result = convert.convert(token);
+
+        System.out.println(result);
+        assertEquals("007 노 타임 투 다이", result);
+    }
     
 }

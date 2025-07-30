@@ -80,4 +80,14 @@ public class ConverterK2ETest {
         assertEquals("tlsghsdugod()", result);
     }
 
+    @Test
+    public void test7() {
+        String token = "007 ㅜㅐ 샤ㅡㄷ 새 얃";
+
+        KorToEngConverter convert = new KorToEngConverter();
+        String result = convert.convert(token);
+
+        System.out.println(result);
+        assertEquals("007 no time to die", result);
+    }
 }

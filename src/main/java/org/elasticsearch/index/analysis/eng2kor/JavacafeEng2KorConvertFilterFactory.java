@@ -11,7 +11,7 @@ public class JavacafeEng2KorConvertFilterFactory extends AbstractTokenFilterFact
 
     
     public JavacafeEng2KorConvertFilterFactory(IndexSettings indexSettings, Environment env , String name, Settings settings) {
-        super(indexSettings, name, settings);
+        super(name);
     }
     
 

@@ -10,7 +10,7 @@ public class JavacafeSpellFilterFactory extends AbstractTokenFilterFactory {
 
     
     public JavacafeSpellFilterFactory(IndexSettings indexSettings, Environment env, String name, Settings settings) {
-        super(indexSettings, name, settings);
+        super(name);
     }
     
 

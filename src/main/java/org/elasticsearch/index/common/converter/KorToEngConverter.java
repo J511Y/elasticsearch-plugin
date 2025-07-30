@@ -30,7 +30,7 @@ public class KorToEngConverter {
             // 처리 불가능한 글자는 그냥 넘긴다.
             if (KeyboardUtil.IGNORE_CHAR.indexOf(word.substring(index, index + 1)) > -1) {
                 sb.append(word.substring(index, index + 1));
-                index++;
+                continue;
             }
             if (index >= word.length()) {
             	break;

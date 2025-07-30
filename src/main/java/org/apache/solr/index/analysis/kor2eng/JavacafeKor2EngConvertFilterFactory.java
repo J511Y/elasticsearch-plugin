@@ -1,7 +1,7 @@
 package org.apache.solr.index.analysis.kor2eng;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.apache.lucene.analysis.TokenFilterFactory;
 import org.elasticsearch.index.analysis.kor2eng.JavacafeKor2EngConvertFilter;
 
 import java.util.Map;
